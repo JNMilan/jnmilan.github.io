@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Calculator</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 style="text-align: center;">CORONA CASES PERCENTAGE CALCULATOR</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header m-t-7" ;><b>CORONA CASE CALCULATOR</b></div>
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <label for="totalCases" class="text-info">Enter Total Number of Cases in your Country
+                                :</label>
+                            <input class="form-control" type="text" id="totalCases" value="" name="totalcases"
+                                placeholder="Enter total number of cases" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="recoveredCases"> Enter Total Number of Recovered Cases in your
+                                Country :</label>
+                            <input class="form-control" id="recoveredCases" type="text"
+                                placeholder="Enter total number of recovered cases" value="0" /></div>
+                        <div class="form-group">
+                            <label for="activeCases">Enter Total Number of Active Cases in your
+                                Country :</label>
+                            <input class="form-control" id="activeCases" type="text"
+                                placeholder="Enter total number of active cases" value="0" /></div>
+                        <div class="form-group">
+                            <label for="deaths">Enter Total Number of Deaths in your Country :</label>
+                            <input class="form-control" id="deaths" type="text"
+                                placeholder="Enter total number of deaths" value="0" /></div>
+                        <hr>
+                        <button onclick="caseCalculator()" class="btn btn-info ">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header"><b>RESULTS</b></div>
+                    <div class="card-body">
+                        <p id="recoveredCasesP"><b>RECOVERED CASES </b>: </p>
+                        <p id="activeCasesP"><b>ACTIVE CASES </b>: </p>
+                        <p id="deathsP"><b>DEATHS </b>: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/JS/percentageCalculator.js"></script>
+    <script src="assets/JS/receiveValues.js"></script>
+    <script src="assets/JS/valueViewer.js"></script>
+    <script src="assets/JS/casePercentage.js"></script>
+    <script>
+        function caseCalculator() {
+            casePercentage("");
+        }
+    </script>
+</body>
+
+</html>
