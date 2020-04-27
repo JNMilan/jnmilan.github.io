@@ -20,10 +20,20 @@
 </head>
 
 <body>
-    <input type="text" placeholder="Enter user id" id="userId">
-    <input type="password" id="userPassword" placeholder="Enter password">
-    <button onclick="validateLogin()">Login</button>
-    <p id="message"></p>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Enter user id" id="userId"></div>
+            <div class="form-group">
+                <input class="form-control" type="password" id="userPassword" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" onclick="validateLogin()">Login</button>
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -34,7 +44,8 @@
         var userPassword = document.getElementById("userPassword").value;
 
         if (userId == "jnmilan@jnmilan.com.np" && userPassword == "Hello") {
-            windows.location.href = "MainPage.html";
+            window.location.href = "MainPage.html";
+
 
         } else {
             document.getElementById("message").innerHTML = "Login Failure"
