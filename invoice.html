@@ -16,24 +16,170 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    <style>
+        #amountTable td {
+            padding: 2px !important;
+        }
+    </style>
 </head>
 
-<body>
-    <div class=" container-fluid">
-        <div class="border m-3 p-2">
+<body style="background-color:rgb(240,240,240)">
+    <div class=" container-fluid ">
+        <div class=" border mx-auto m-5 p-4 shadow-lg" style="width:21cm;height:29.7cm;position: relative;">
+
             <div class="row">
                 <div class="col-md-12">
-                    <div style="text-align:right">
-                        <h3>INVOICE</h3>
+                    <div style="float:right; ">
+                        <div style="font-size:37px;color:rgba(0,0,255,0.3);"><b> INVOICE</b></div>
+                        <div id="date">DATE : 2020/04/29 </div>
+                        <div id="invoiceNumber">INVOICE# : 11111 </div>
+                        <div id="customerId">CUSTOMER ID : 98779</div>
                     </div>
-                    <div style="text-align: left">
-                        <h2>The Milan's Restaurant</h2>
+
+                    <div style="float:left;">
+                        <div id="companyName" style="font-size:37px">
+                            <b>The Milan's Restaurant</b></div>
+                        <div id="address">
+                            Dhulikhel, 45200
+                        </div>
+
+
+                        <div id="phone">
+                            Phone : 9867207186
+                        </div>
+
+
+                        <div id="website">
+                            Website : www.jnmilan.com.np
+                        </div>
                     </div>
+                </div>
+            </div>
+            <hr style="border:3px solid grey;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="w-50  bg-success" style="color:white;">
+                        <span class="ml-2"><b>BILL TO</b></span>
+                    </div>
+                    <div class="ml-2">
+                        <div id="customerName">NAME : </div>
+                        <div id="customerCompany">COMPANY : </div>
+                        <div id="customerAddress">ADDRESS : </div>
+                        <div id="customerPhone">PHONE : </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <table class="table  table-bordered table-striped">
+                        <thead class="table-success ">
+                            <tr>
+                                <td><b>SN</b></td>
+                                <td><b>Description</b></td>
+                                <td><b>Quantity</b></td>
+                                <td><b>Rate</b></td>
+                                <td><b>Amount</b></td>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Pizza</td>
+                                <td>1</td>
+                                <td>Rs.250</td>
+                                <td>Rs.250</td>
+                            </tr>
+
+                            <tr>
+                                <td>2.</td>
+                                <td>Burger</td>
+                                <td>1</td>
+                                <td>Rs.125</td>
+                                <td>Rs.125</td>
+                            </tr>
+
+                            <tr>
+                                <td>3.</td>
+                                <td>Mo:Mo:</td>
+                                <td>3</td>
+                                <td>Rs.100</td>
+                                <td>Rs.300</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table-sm " style="float:right;" id="amountTable">
+                        <tbody>
+                            <tr>
+
+                                <td><b>Sub-total : </b></td>
+                                <td id="subTotal">Rs.625</td>
+                            </tr>
+                            <tr>
+
+                                <td><b>Service Charge (10%) : </b> </td>
+                                <td id="serviceCharge">Rs.62.5</td>
+                            </tr>
+                            <tr>
+
+                                <td><b>VAT (13%) : </b></td>
+                                <td id="vat">Rs.81.25</td>
+                            </tr>
+
+                            <tr style="border-top: 1px solid black;">
+
+                                <td><b>Total : </b></td>
+                                <td id="total">Rs.768.75</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
 
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <table class="table-sm table-bordered  m-1" style="float:left;height:3cm;width:100%;">
+                        <thead>
+                            <td class="bg-info p-2" style="color:white">
+                                <b>AMOUNT IN WORDS</b>
+                            </td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-2">Seven Hundred Sixty Nine Rupees Only /-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row">
+                <div class=" col mx-auto" style="position: absolute;bottom: 10px;">
+                    <hr>
+                    <div style="text-align: center;">
+                        <div> Thank you for choosing us !
+                        </div>
+                        <div>
+                            For any queries :<br> Please catch us at jnmilan7@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </div>
 </body>
 
 </html>
