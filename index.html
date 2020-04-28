@@ -25,7 +25,7 @@
     </style>
 </head>
 
-<body>
+<body onload="timer()">
     <div class="row">
         <div class="col-md-12">
             <div class="border  mx-auto   m-5 p-5 rounded-lg shadow-lg" style="width:350px; max-width: 90%;">
@@ -50,6 +50,9 @@
 
 
             </div>
+            <div class="border  mx-auto   m-5 p-5 rounded-lg shadow-lg" style="width:350px; max-width: 90%;">
+                <p style="text-align: center" id="time"></p>
+            </div>
         </div>
     </div>
 </body>
@@ -69,4 +72,15 @@
             document.getElementById("message").innerHTML = "Login Failure"
         }
     }
+
+
+    function timer() {
+        var d = new Date();
+        var h = d.getHours()
+        var m = d.getMinutes()
+        var s = d.getSeconds();
+        document.getElementById("time").innerHTML = h + " :" + m + " :" + s;
+        setTimeout(timer, 500)
+    }
+
 </script>
