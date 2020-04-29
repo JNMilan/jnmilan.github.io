@@ -1,6 +1,6 @@
 function toWord(amount) {
     var words = new Array();
-    words[0] = '';
+    words[0] = 'Zero';
     words[1] = 'One';
     words[2] = 'Two';
     words[3] = 'Three';
@@ -77,5 +77,6 @@ function toWord(amount) {
         }
         words_string = words_string.split("  ").join(" ");
     }
+    console.log(words_string)
     return words_string;
 }

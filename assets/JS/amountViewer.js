@@ -15,6 +15,7 @@ function amountViewer() {
         valueViewer("serviceCharge", "", serviceCharge, "");
         valueViewer("vat", "", vat, "");
         valueViewer("total", "", total, "");
-        valueViewer("amountInWords", "", toWord(Math.round(total)));
+        var totalNumeric = Math.round(total);
+        valueViewer("amountInWords", "", toWord(parseInt(Math.round(total))), "");
     }
 }   
