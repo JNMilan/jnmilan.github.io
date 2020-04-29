@@ -21,35 +21,130 @@
             padding: 2px !important;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Baloo Tamma 2', cursive;
+
+        }
+    </style>
 </head>
 
 <body style="background-color:rgb(240,240,240)">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="MainPage.html"><b>PERCENTAGE VIEWER</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="casecalculator.html"><b>PERCENTAGE CALCULATOR</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="invoice.html"><b>INVOICE</b></a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 border m-3 p-3 shadow-lg" style="background-color:white;">
+                <div class="m-3" style="text-align: center;font-size: 17px;">
+                    <b>Enter Customer Details</b>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date : </label>
+                    <input class="form-control" type="date" id="date" name="Date" placeholder="Enter Date">
+                </div>
+                <div class="form-group">
+                    <label for="invoiceNumber">Invoice Number :</label>
+                    <input class="form-control" type="number" id="invoiceNumber" placeholder="Enter Invoice Number">
+                </div>
+                <div class="form-group">
+                    <label for="customerId">Customer ID :</label>
+                    <input class="form-control" type="text" id="customerId" placeholder="Enter Customer ID">
+                </div>
+                <div class="form-group">
+                    <label for="customerName">Customer Name :</label>
+                    <input class="form-control" type="text" id="customerName" value="" name="Name"
+                        placeholder="Enter Customer Name"></div>
+                <div class="form-group">
+                    <label for="customerCompany">Customer Company : </label>
+                    <input class="form-control" type="text" id="customerCompany" value="" name="Company"
+                        placeholder="Enter Company Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Customer Address :</label>
+                    <input class="form-control" type="text" id="customerAddress" value="" name="Address"
+                        placeholder="Enter Customer Address">
+
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Customer Phone Number :</label>
+                    <input class="form-control" type="number" id="customerPhone" value="" name="Phone Number"
+                        placeholder="Enter Phone Number">
+
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info" onclick="insertCustomerDetails()">Set Customer Details</button>
+                </div>
+            </div>
+
+            <div class="col-md-5  m-3 p-3 border shadow-log" style="background-color:white;">
+
+                <div class="m-3 " style="text-align: center;font-size: 23px;"> Take Order Details
+                </div>
+
+                <div class="form-group">
+                    <label for="itemName">Item Name</label>
+                    <input class="form-control" type="text" placeholder="Enter Item Name" value="" id="itemName">
+                </div>
+                <div class="form-group">
+                    <label for="itemQuantity">Quantity (No. of items)</label>
+                    <input class="form-control" type="number" placeholder="Enter the no of items" value=""
+                        id="itemQuantity">
+                </div>
+                <div class="form-group">
+                    <label for="itemRate">Rate :</label>
+                    <input class="form-control" type="number" placeholder="Enter the rate of item" value=""
+                        id="itemRate">
+                </div>
+                <div class="form-group" style="float: left;">
+                    <button class="btn btn-info" onclick="addItem()">Take Order</button>
+                </div>
+                <div class="form-group" style="float: right;">
+                    <button class='btn btn-success' onclick="clearInvoice()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class=" container-fluid ">
-        <div class=" border mx-auto m-5 p-4 shadow-lg" style="width:21cm;height:29.7cm;position: relative;">
+        <div class=" border mx-auto m-5 p-4 shadow-lg"
+            style="width:21cm;height:29.7cm;position: relative;background-color:white;">
 
             <div class="row">
                 <div class="col-md-12">
                     <div style="float:right; ">
                         <div style="font-size:37px;color:rgba(0,0,255,0.3);"><b> INVOICE</b></div>
-                        <div id="date">DATE : 2020/04/29 </div>
-                        <div id="invoiceNumber">INVOICE# : 11111 </div>
-                        <div id="customerId">CUSTOMER ID : 98779</div>
+                        <div id="dateD">DATE : 2020/04/29 </div>
+                        <div id="invoiceNumberD">INVOICE# : 11111 </div>
+                        <div id="customerIdD">CUSTOMER ID : 98779</div>
                     </div>
 
                     <div style="float:left;">
-                        <div id="companyName" style="font-size:37px">
+                        <div style="font-size:37px">
                             <b>The Milan's Restaurant</b></div>
-                        <div id="address">
+                        <div>
                             Dhulikhel, 45200
                         </div>
 
 
-                        <div id="phone">
+                        <div>
                             Phone : 9867207186
                         </div>
 
 
-                        <div id="website">
+                        <div>
                             Website : www.jnmilan.com.np
                         </div>
                     </div>
@@ -62,10 +157,10 @@
                         <span class="ml-2"><b>BILL TO</b></span>
                     </div>
                     <div class="ml-2">
-                        <div id="customerName">NAME : </div>
-                        <div id="customerCompany">COMPANY : </div>
-                        <div id="customerAddress">ADDRESS : </div>
-                        <div id="customerPhone">PHONE : </div>
+                        <div id="customerNameD">NAME : </div>
+                        <div id="customerCompanyD">COMPANY : </div>
+                        <div id="customerAddressD">ADDRESS : </div>
+                        <div id="customerPhoneD">PHONE : </div>
                     </div>
                 </div>
             </div>
@@ -83,13 +178,13 @@
 
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="invoiceItems">
                             <tr>
                                 <td>1.</td>
                                 <td>Pizza</td>
                                 <td>1</td>
                                 <td>Rs.250</td>
-                                <td>Rs.250</td>
+                                <td>Rs.<span id="1">250</span></td>
                             </tr>
 
                             <tr>
@@ -97,7 +192,7 @@
                                 <td>Burger</td>
                                 <td>1</td>
                                 <td>Rs.125</td>
-                                <td>Rs.125</td>
+                                <td>Rs.<span id="2">125</span></td>
                             </tr>
 
                             <tr>
@@ -105,7 +200,7 @@
                                 <td>Mo:Mo:</td>
                                 <td>3</td>
                                 <td>Rs.100</td>
-                                <td>Rs.300</td>
+                                <td>Rs.<span id="3">300</span></td>
                             </tr>
 
                         </tbody>
@@ -121,23 +216,23 @@
                             <tr>
 
                                 <td><b>Sub-total : </b></td>
-                                <td id="subTotal">Rs.625</td>
+                                <td>Rs.<span id="subTotal">625</span></td>
                             </tr>
                             <tr>
 
                                 <td><b>Service Charge (10%) : </b> </td>
-                                <td id="serviceCharge">Rs.62.5</td>
+                                <td>Rs.<span id="serviceCharge">62.5</span></td>
                             </tr>
                             <tr>
 
                                 <td><b>VAT (13%) : </b></td>
-                                <td id="vat">Rs.81.25</td>
+                                <td>Rs.<span id="vat">81.25</span></td>
                             </tr>
 
                             <tr style="border-top: 1px solid black;">
 
                                 <td><b>Total : </b></td>
-                                <td id="total">Rs.768.75</td>
+                                <td>Rs.<span id="total">768.75</span></td>
                             </tr>
                         </tbody>
 
@@ -145,7 +240,7 @@
 
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-2">
                 <div class="col">
                     <table class="table-sm table-bordered  m-1" style="float:left;height:3cm;width:100%;">
                         <thead>
@@ -155,7 +250,8 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="p-2">Seven Hundred Sixty Nine Rupees Only /-</td>
+                                <td class="p-2"><span id="amountInWords">Seven Hundred Sixty Nine </span> Rupees Only /-
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -180,6 +276,18 @@
             </div>
 
         </div>
+        <script>var invoiceCounter = 3;</script>
+        <script src="assets/JS/receiveString.js"></script>
+        <script src="assets/JS/receiveValues.js"></script>
+        <script src="assets/JS/valueViewer.js"></script>
+        <script src="assets/JS/insertCustomerDetails.js"></script>
+        <script src="assets/JS/clearInvoice.js"></script>
+        <script src="assets/JS/addItem.js"></script>
+        <script src="assets/JS/valueAdder.js"></script>
+        <script src="assets/JS/amountViewer.js"></script>
+        <script src="assets/JS/subTotal.js"></script>
+        <script src="assets/JS/percentageAdder.js"></script>
+        <script src="assets/JS/toWord.js"></script>
 </body>
 
 </html>
