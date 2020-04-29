@@ -1,5 +1,7 @@
 function addItem() {
     //SN
+    //get invoiceCounter value
+    var invoiceCounter = localStorage.getItem("invoiceCounter");
     invoiceCounter += 1;
     var quantity = receiveValues("itemQuantity");
     var rate = receiveValues("itemRate");
@@ -8,7 +10,10 @@ function addItem() {
     //valueAdder("invoiceItems", "<td>", quantity, "</td>"); // quantity
     //valueAdder("invoiceItems", "<td>", rate, "</td>"); //rate
     //valueAdder("invoiceItems", "<td>", quantity * rate, "</td></tr>"); // amount
+
     var midValue = "<td>" + invoiceCounter + "</td>" + "<td>" + receiveString("itemName") + "</td>" + "<td>" + quantity + "</td>" + "<td>" + rate + "</td>" + "<td>Rs. <span id='" + invoiceCounter + "'>" + quantity * rate + "</span></td>";
-    valueAdder("invoiceItems", "<tr>", midValue, "</tr>")
+    //valueAdder("invoiceItems", "<tr>", midValue, "</tr>") in the view window
+    localStorage.setItem(invoiceCounter, midValue);
+    localStorage.setItem("invoiceCounter", invoiceCounter);
     amountViewer();
 }

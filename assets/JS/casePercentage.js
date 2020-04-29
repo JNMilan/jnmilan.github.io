@@ -5,7 +5,7 @@ function casePercentage(countryIdentifier) {
     var recoveredCases = receiveValues("recoveredCases" + countryIdentifier);
     var activeCases = receiveValues("activeCases" + countryIdentifier);
     var deaths = receiveValues("deaths" + countryIdentifier);
-
+    console.log(totalCases);
     //calculating percentage
     var recoveredCasesPercentage = percentageCalculator(totalCases, recoveredCases);
     var activeCasesPercentage = percentageCalculator(totalCases, activeCases);

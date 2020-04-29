@@ -1,4 +1,5 @@
 function subTotal() {
+    var invoiceCounter = localStorage.getItem("invoiceCounter")
     if (invoiceCounter == 0) {
         return 0;
     } else {

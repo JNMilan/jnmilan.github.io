@@ -1,5 +1,6 @@
 function amountViewer() {
-    if (invoiceCounter == 0) {
+    var invoiceCounter = localStorage.getItem("invoiceCounter");
+    if (invoiceCounter == null) {
         valueViewer("subTotal", "", 0, "");
         valueViewer("serviceCharge", "", 0, "");
         valueViewer("vat", "", 0, "");
