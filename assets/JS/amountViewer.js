@@ -1,6 +1,6 @@
 function amountViewer() {
-    var invoiceCounter = localStorage.getItem("invoiceCounter");
-    if (invoiceCounter == null) {
+    var invoiceCounter = parseInt(localStorage.getItem("invoiceCounter"));
+    if (isNaN(invoiceCounter)) {
         valueViewer("subTotal", "", 0, "");
         valueViewer("serviceCharge", "", 0, "");
         valueViewer("vat", "", 0, "");

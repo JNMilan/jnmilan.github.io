@@ -1,7 +1,11 @@
 function addItem() {
     //SN
     //get invoiceCounter value
-    var invoiceCounter = localStorage.getItem("invoiceCounter");
+    var invoiceCounter = parseInt(localStorage.getItem("invoiceCounter"));
+
+    if (isNaN(invoiceCounter)) {
+        invoiceCounter = 0;
+    }
     invoiceCounter += 1;
     var quantity = receiveValues("itemQuantity");
     var rate = receiveValues("itemRate");
@@ -15,5 +19,6 @@ function addItem() {
     //valueAdder("invoiceItems", "<tr>", midValue, "</tr>") in the view window
     localStorage.setItem(invoiceCounter, midValue);
     localStorage.setItem("invoiceCounter", invoiceCounter);
-    amountViewer();
+
+
 }

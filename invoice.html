@@ -21,6 +21,7 @@
             padding: 2px !important;
         }
     </style>
+
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -51,38 +52,40 @@
                 <div class="m-3" style="text-align: center;font-size: 17px;">
                     <b>Enter Customer Details</b>
                 </div>
+
                 <div class="form-group">
                     <label for="date">Date : </label>
-                    <input class="form-control" type="date" id="date" name="Date" placeholder="Enter Date">
+                    <input class="form-control" type="date" id="date" name="Date" placeholder="Enter Date" required>
                 </div>
                 <div class="form-group">
                     <label for="invoiceNumber">Invoice Number :</label>
-                    <input class="form-control" type="number" id="invoiceNumber" placeholder="Enter Invoice Number">
+                    <input class="form-control" type="number" id="invoiceNumber" placeholder="Enter Invoice Number"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="customerId">Customer ID :</label>
-                    <input class="form-control" type="text" id="customerId" placeholder="Enter Customer ID">
+                    <input class="form-control" type="text" id="customerId" placeholder="Enter Customer ID" required>
                 </div>
                 <div class="form-group">
                     <label for="customerName">Customer Name :</label>
                     <input class="form-control" type="text" id="customerName" value="" name="Name"
-                        placeholder="Enter Customer Name"></div>
+                        placeholder="Enter Customer Name" required></div>
                 <div class="form-group">
                     <label for="customerCompany">Customer Company : </label>
                     <input class="form-control" type="text" id="customerCompany" value="" name="Company"
-                        placeholder="Enter Company Name">
+                        placeholder="Enter Company Name" required>
 
                 </div>
                 <div class="form-group">
                     <label for="customerAddress">Customer Address :</label>
                     <input class="form-control" type="text" id="customerAddress" value="" name="Address"
-                        placeholder="Enter Customer Address">
+                        placeholder="Enter Customer Address" required>
 
                 </div>
                 <div class="form-group">
                     <label for="customerPhone">Customer Phone Number :</label>
                     <input class="form-control" type="number" id="customerPhone" value="" name="Phone Number"
-                        placeholder="Enter Phone Number">
+                        placeholder="Enter Phone Number" required>
 
                 </div>
                 <div class="form-group" style="float: left;">
@@ -91,6 +94,7 @@
                 <div class="form-group" style="float: right;">
                     <button class="btn btn-warning" onclick="clearInvoiceCustomerDetails()">Clear Details</button>
                 </div>
+
             </div>
 
             <div class="col-md-5  m-3 p-3 border shadow-log" style="background-color:white;">
@@ -100,17 +104,18 @@
 
                 <div class="form-group">
                     <label for="itemName">Item Name</label>
-                    <input class="form-control" type="text" placeholder="Enter Item Name" value="" id="itemName">
+                    <input class="form-control" type="text" placeholder="Enter Item Name" value="" id="itemName"
+                        required>
                 </div>
                 <div class="form-group">
                     <label for="itemQuantity">Quantity (No. of items)</label>
                     <input class="form-control" type="number" placeholder="Enter the no of items" value=""
-                        id="itemQuantity">
+                        id="itemQuantity" required>
                 </div>
                 <div class="form-group">
                     <label for="itemRate">Rate :</label>
                     <input class="form-control" type="number" placeholder="Enter the rate of item" value=""
-                        id="itemRate">
+                        id="itemRate" required>
                 </div>
                 <div class="form-group" style="float: left;">
                     <button class="btn btn-info" onclick="addItem()">Take Order</button>
@@ -125,9 +130,11 @@
                         Create
                         Invoice Report</button>
                 </div>
+
             </div>
         </div>
     </div>
+    <div id="snackbar">Message</div>
 
 
 
