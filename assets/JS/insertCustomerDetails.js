@@ -25,4 +25,5 @@ function insertCustomerDetails() {
     //valueViewer("customerAddressD", "ADDRESS : ", receiveString("customerAddress"), "");
     localStorage.setItem("customerPhoneD", receiveValues("customerPhone"))
     //valueViewer("customerPhoneD", "PHONE : ", receiveValues("customerPhone"), "");
+    snackBar(receiveString("customerName") + " is added to the invoice.")
 }
