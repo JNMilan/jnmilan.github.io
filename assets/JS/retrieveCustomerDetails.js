@@ -1,9 +1,10 @@
 function retrieveCustomerDetails() {
-    valueViewer("invoiceNumberD", "INVOICE# : ", localStorage.getItem("invoiceNumberD"), "");
-    valueViewer("dateD", "DATE : ", localStorage.getItem("dateD"), "");
-    valueViewer("customerIdD", "CUSTOMER ID : ", localStorage.getItem("customerIdD"), "");
-    valueViewer("customerNameD", "NAME : ", localStorage.getItem("customerNameD"), "");
-    valueViewer("customerCompanyD", "COMPANY : ", localStorage.getItem("customerCompanyD"), "");
-    valueViewer("customerAddressD", "ADDRESS : ", localStorage.getItem("customerAddressD"), "");
-    valueViewer("customerPhoneD", "PHONE : ", localStorage.getItem("customerPhoneD"), "");
+    valueViewer("invoiceNumberD", "INVOICE# : ", decrypt(localStorage.getItem("invoiceNumberD")), "");
+    valueViewer("dateD", "DATE : ", decrypt(localStorage.getItem("dateD")), "");
+
+    valueViewer("customerIdD", "CUSTOMER ID : ", decrypt(localStorage.getItem("customerIdD")), "");
+    valueViewer("customerNameD", "NAME : ", decrypt(localStorage.getItem("customerNameD")), "");
+    valueViewer("customerCompanyD", "COMPANY : ", decrypt(localStorage.getItem("customerCompanyD")), "");
+    valueViewer("customerAddressD", "ADDRESS : ", decrypt(localStorage.getItem("customerAddressD")), "");
+    valueViewer("customerPhoneD", "PHONE : ", decrypt(localStorage.getItem("customerPhoneD")), "");
 }

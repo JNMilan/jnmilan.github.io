@@ -1,5 +1,5 @@
 function amountViewer() {
-    var invoiceCounter = parseInt(localStorage.getItem("invoiceCounter"));
+    var invoiceCounter = parseInt(decrypt(localStorage.getItem("invoiceCounter")));
     if (isNaN(invoiceCounter)) {
         valueViewer("subTotal", "", 0, "");
         valueViewer("serviceCharge", "", 0, "");
@@ -15,7 +15,7 @@ function amountViewer() {
         valueViewer("serviceCharge", "", serviceCharge, "");
         valueViewer("vat", "", vat, "");
         valueViewer("total", "", total, "");
-        var totalNumeric = Math.round(total);
+
         valueViewer("amountInWords", "", toWord(parseInt(Math.round(total))), "");
     }
 }   

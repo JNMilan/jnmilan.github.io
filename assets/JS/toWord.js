@@ -77,6 +77,6 @@ function toWord(amount) {
         }
         words_string = words_string.split("  ").join(" ");
     }
-    console.log(words_string)
+
     return words_string;
 }

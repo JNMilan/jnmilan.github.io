@@ -1,7 +1,7 @@
 function addItem() {
     //SN
     //get invoiceCounter value
-    var invoiceCounter = parseInt(localStorage.getItem("invoiceCounter"));
+    var invoiceCounter = parseInt(decrypt(localStorage.getItem("invoiceCounter")));
 
     if (isNaN(invoiceCounter)) {
         invoiceCounter = 0;
@@ -17,8 +17,8 @@ function addItem() {
     var itemName = receiveString("itemName");
     var midValue = "<td>" + invoiceCounter + "</td>" + "<td>" + receiveString("itemName") + "</td>" + "<td>" + quantity + "</td>" + "<td>" + rate + "</td>" + "<td>Rs. <span id='" + invoiceCounter + "'>" + quantity * rate + "</span></td>";
     //valueAdder("invoiceItems", "<tr>", midValue, "</tr>") in the view window
-    localStorage.setItem(invoiceCounter, midValue);
-    localStorage.setItem("invoiceCounter", invoiceCounter);
+    localStorage.setItem(invoiceCounter, encrypt(midValue));
+    localStorage.setItem("invoiceCounter", encrypt(String(invoiceCounter)));
     snackBar(itemName + " has been added");
 
 }

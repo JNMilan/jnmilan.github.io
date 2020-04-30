@@ -1,5 +1,5 @@
 function subTotal() {
-    var invoiceCounter = parseInt(localStorage.getItem("invoiceCounter"));
+    var invoiceCounter = parseInt(decrypt(localStorage.getItem("invoiceCounter")));
     if (isNaN(invoiceCounter)) {
         return 0;
     } else {
